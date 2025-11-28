@@ -55,11 +55,11 @@ def rca_ode(t, y, params, k):
     # kinetics / helpers
     Km_N = k.get('Km_N', 25.0)
     Km_Mg = k.get('Km_Mg', 2000.0)
-    k_syn = k.get('k*', 1.0)
+    k_syn = k.get('k*', 1)
 
     # additional effects
     s_N = k.get('s_N', 1.0)       # stoichiometric factor: µM dNTP consumed per unit of D formed
-    k_deg = k.get('k_deg', 1e-5)  # enzyme first-order decay (s^-1)
+    k_deg = k.get('k_deg', 2e-5)  # enzyme first-order decay (s^-1)
 
     # ensure non-negative concentrations in rate expressions
     N_pos = max(N, 0.0)

@@ -82,13 +82,13 @@ app.layout = html.Div([
             marks=None
         ),
 
-        html.Label('Reaction Time (h)'),
+        html.Label('Incubation time (h)'),
         dcc.Slider(
             id='time-slider',
             min=0,
-            max=16,
+            max=4,
             step=0.1,
-            value=16,
+            value=4,
             tooltip={"placement": "bottom", "always_visible": True},
             marks=None
         ),
@@ -101,12 +101,18 @@ app.layout = html.Div([
 
             # 3 columns, 2 rows grid of plots
             html.Div([
-                dcc.Graph(id='yield-time-plot', style={'height': '240px'}),
-                dcc.Graph(id='yield-vs-template', style={'height': '240px'}),
-                dcc.Graph(id='yield-vs-polymerase', style={'height': '240px'}),
-                dcc.Graph(id='yield-vs-primers', style={'height': '240px'}),
-                dcc.Graph(id='yield-vs-dntps', style={'height': '240px'}),
-                dcc.Graph(id='yield-vs-mg', style={'height': '240px'})
+                html.Div(dcc.Graph(id='yield-time-plot', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'}),
+                html.Div(dcc.Graph(id='yield-vs-template', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'}),
+                html.Div(dcc.Graph(id='yield-vs-polymerase', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'}),
+                html.Div(dcc.Graph(id='yield-vs-primers', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'}),
+                html.Div(dcc.Graph(id='yield-vs-dntps', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'}),
+                html.Div(dcc.Graph(id='yield-vs-mg', style={'height': '240px'}),
+                         style={'border': '1px solid #e6e6e6', 'borderRadius': '6px', 'padding': '6px', 'background': 'transparent'})
             ], style={
                 'display': 'grid',
                 'gridTemplateColumns': 'repeat(3, 1fr)',

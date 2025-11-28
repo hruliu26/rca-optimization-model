@@ -5,7 +5,7 @@ param_ranges = {
     'primers': (0, 5, 0.1),       # µM
     'dNTPs': (0, 20, 0.1),        # mM
     'Mg2': (0, 10, 0.1),          # mM
-    'time': (0, 16*60, 60),       # range of 0 to 16 hours
+    'time': (0, 4*60, 60),       # range of 0 to 4 hours
 }
 
 # default parameters 

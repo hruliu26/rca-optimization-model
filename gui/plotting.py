@@ -9,8 +9,8 @@ def _base_figure(x, y):
         margin=dict(l=12, r=8, t=28, b=30),
         xaxis=dict(showgrid=True, gridcolor='#e6e6e6', zeroline=False),
         yaxis=dict(showgrid=True, gridcolor='#e6e6e6', zeroline=False),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)'
+        plot_bgcolor='#f2f2f2',
+        paper_bgcolor='#f2f2f2'
     )
     return fig
 
